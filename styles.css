@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ------------------ HEADER ------------------ */
+.top-style {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 2em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1em;
+}
+
+header h1 {
+    flex-shrink: 0;
+}
+
+#searchbar {
+    padding: 0.8em 2em;
+    min-width: 300px;
+}
+
+
+/* ------------------ NAV ------------------ */
+button {
+    padding: 0.2em 0.5em;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+}
+
+nav>div {
+    display: flex;
+    gap: 1em;
+}
+
+#addEmp {
+    background-color: rgb(4, 157, 4);
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ------------------ CARD ------------------ */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    gap: 1em;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.card>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------------------ FILTER PANEL (ASIDE) ------------------ */
+aside {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20em;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.15);
+    padding: 2em 1em;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+}
+
+aside.visible {
+    transform: translateX(0);
+}
+
+/* ------------------ ADD/EDIT FORM ------------------ */
+#addedit {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.form-row {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 0.75em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.form-actions button {
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    background: #007bff;
+    color: white;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1em;
+    }
+
+    .header-top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    #searchbar {
+        width: 100%;
+    }
+
+    /* Keep previous responsive rules below */
+    .card-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav>div {
+        flex-direction: column;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .form-actions .submit-btn {
+        order: -1;
+    }
+
+    aside {
+        width: 100%;
+        max-width: 22em;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: white;
+        position: fixed;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    aside.visible {
+        transform: translateX(0);
+    }
+}

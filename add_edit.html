@@ -1,0 +1,117 @@
+<!--
+  Simulated FreeMarker Template Context
+  -------------------------------------
+  This HTML file simulates FreeMarker logic using HTML comments.
+  It is rendered fully on the frontend using JavaScript.
+
+  FTL-like variables available on this page:
+    - formMode: "add" or "edit"
+    - employee: {
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "email": "alice@example.com",
+        "department": "HR",
+        "role": "Manager"
+      }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add/Edit Employee</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="addedit">
+      <form class="form-container">
+
+        <!-- FTL: Conditional heading -->
+        <!-- <#if formMode == "edit"> -->
+        <!--   <h2>Update Employee</h2> -->
+        <!-- <#else> -->
+        <!--   <h2>Add Employee</h2> -->
+        <!-- </#if> -->
+
+        <h2>Add Employee</h2>
+        <br />
+
+        <div class="form-row">
+          <!-- <input type="text" name="firstName" value="${employee.firstName}" /> -->
+          <input
+            type="text"
+            placeholder="First name"
+            name="firstName"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <!-- <input type="text" name="lastName" value="${employee.lastName}" /> -->
+          <input
+            type="text"
+            placeholder="Last name"
+            name="lastName"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <!-- <input type="email" name="email" value="${employee.email}" /> -->
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+
+          <!--
+          <select name="department">
+            <option value="HR" <#if employee.department == "HR">selected</#if>>HR</option>
+            <option value="IT" <#if employee.department == "IT">selected</#if>>IT</option>
+            <option value="Finance" <#if employee.department == "Finance">selected</#if>>Finance</option>
+          </select>
+          -->
+          <select name="department" required>
+            <option value="">Department</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Finance">Finance</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <!--
+          <select name="role">
+            <option value="Manager" <#if employee.role == "Manager">selected</#if>>Manager</option>
+            <option value="Developer" <#if employee.role == "Developer">selected</#if>>Developer</option>
+            <option value="Analyst" <#if employee.role == "Analyst">selected</#if>>Analyst</option>
+          </select>
+          -->
+          <select name="role" required>
+            <option value="">Role</option>
+            <option value="Manager">Manager</option>
+            <option value="Developer">Developer</option>
+            <option value="Analyst">Analyst</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="cancel-btn">Cancel</button>
+
+          <!-- <#if formMode == "edit"> -->
+          <!--   <button type="submit" class="submit-btn">Update</button> -->
+          <!-- <#else> -->
+          <!--   <button type="submit" class="submit-btn">Add</button> -->
+          <!-- </#if> -->
+
+          <button type="submit" class="submit-btn">Add</button>
+        </div>
+      </form>
+    </section>
+
+
+    <script type="module" src="add_edit.js"></script>
+  </body>
+</html>
