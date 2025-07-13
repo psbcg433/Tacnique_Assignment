@@ -1,8 +1,3 @@
-Here is the **complete and ready-to-use `README.md`** content in proper Markdown format — no cuts, no explanations, just the raw `.md` file content:
-
----
-
-````markdown
 # 👥 Employee Directory App
 
 A responsive, client-side **Employee Directory Web Application** that simulates FreeMarker templating using static HTML, CSS, and vanilla JavaScript — no backend or build tooling required.
@@ -66,9 +61,7 @@ A responsive, client-side **Employee Directory Web Application** that simulates 
 ├── app.js              # Main logic (rendering, search, filters, pagination)
 ├── add_edit.js         # Form handling logic (edit or add mode)
 └── README.md           # You're here
-````
 
----
 
 ## 🔧 Installation & Setup
 
