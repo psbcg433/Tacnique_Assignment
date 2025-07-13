@@ -1,3 +1,8 @@
+Here is the **complete and ready-to-use `README.md`** content in proper Markdown format — no cuts, no explanations, just the raw `.md` file content:
+
+---
+
+````markdown
 # 👥 Employee Directory App
 
 A responsive, client-side **Employee Directory Web Application** that simulates FreeMarker templating using static HTML, CSS, and vanilla JavaScript — no backend or build tooling required.
@@ -44,9 +49,9 @@ A responsive, client-side **Employee Directory Web Application** that simulates 
 
 | Layer | Technology |
 |-------|------------|
-| HTML | Static HTML with simulated FreeMarker tags |
-| CSS  | Responsive, custom styling (no frameworks) |
-| JS   | Vanilla JavaScript (ES6 modules, DOM API, sessionStorage) |
+| HTML  | Static HTML with simulated FreeMarker tags |
+| CSS   | Responsive, custom styling (no frameworks) |
+| JS    | Vanilla JavaScript (ES6 modules, DOM API, `sessionStorage`) |
 
 ---
 
@@ -61,3 +66,65 @@ A responsive, client-side **Employee Directory Web Application** that simulates 
 ├── app.js              # Main logic (rendering, search, filters, pagination)
 ├── add_edit.js         # Form handling logic (edit or add mode)
 └── README.md           # You're here
+````
+
+---
+
+## 🔧 Installation & Setup
+
+You can run this project locally in just a few steps.
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/psbcg433/Tacnique_Assignment.git
+cd Tacnique_Assignment
+```
+
+### 2️⃣ Open in your browser
+
+Since this is a pure static frontend project, there's **no build process**. Just open `index.html` directly:
+
+```bash
+# On VS Code or any code editor
+# Right click on index.html → "Open with Live Server"
+```
+
+Or double-click the file:
+
+```bash
+open index.html     # Mac
+start index.html    # Windows
+```
+
+---
+
+### 🔁 Optional: Serve Locally (Recommended)
+
+Use any static file server for better routing support (e.g., Live Server, Python, Node.js)
+
+#### Python (if installed):
+
+```bash
+# Python 3
+python -m http.server 3000
+```
+
+Then go to: `http://localhost:3000`
+
+#### Node.js (if installed):
+
+```bash
+npx serve .
+```
+
+
+
+## 📌 Notes
+
+* **No backend/database**: All state (employee data) is stored in `sessionStorage` and resets when browser is closed or refreshed.
+* Follows **progressive enhancement** principles — works even without JS for the static structure, with enhanced features layered on.
+* 100% **vanilla JavaScript** — no external libraries used.
+
+---
+
